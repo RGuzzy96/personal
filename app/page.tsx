@@ -47,8 +47,8 @@ export default function Home() {
                 style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
                 className='border border-gray-300 rounded-3xl bg-white shadow-xl p-8 flex flex-col justify-center items-center gap-y-8 cursor-grab active:cursor-grabbing'
             >
-                <h1 className='text-xl font-semibold text-gray-900'>Hey, I'm Ryan.</h1>
-                <p className='text-lg text-gray-900'>This is my personal website. Evidently, it's under construction.</p>
+                <h1 className='text-xl font-semibold text-gray-900'>Hey, I&apos;m Ryan.</h1>
+                <p className='text-lg text-gray-900'>This is my personal website. Evidently, it&apos;s under construction.</p>
                 <p className='text-lg text-gray-900'>
                   Currently building:<Link href='https://www.launchpal.ai/' className='p-2 font-semibold hover:text-purple-700 cursor-pointer'>LaunchPal AI</Link>
                 </p>
