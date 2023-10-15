@@ -45,11 +45,11 @@ export default function Home() {
                 draggable 
                 onDragStart={handleDragStart} 
                 style={{ transform: `translate(${position.x}px, ${position.y}px)` }}
-                className='border border-gray-300 rounded-3xl bg-white shadow-xl p-8 flex flex-col justify-center items-center gap-y-8 cursor-grab active:cursor-grabbing'
+                className='mx-4 sm:mx-0 border border-gray-300 rounded-3xl bg-white shadow-xl p-8 flex flex-col justify-center items-center gap-y-8 cursor-grab active:cursor-grabbing'
             >
-                <h1 className='text-xl font-semibold text-gray-900'>Hey, I&apos;m Ryan.</h1>
-                <p className='text-lg text-gray-900'>This is my personal website. Evidently, it&apos;s under construction.</p>
-                <p className='text-lg text-gray-900'>
+                <h1 className='text-xl font-semibold text-gray-900 text-center'>Hey, I&apos;m Ryan.</h1>
+                <p className='text-lg text-gray-900 text-center'>This is my personal website. Evidently, it&apos;s under construction.</p>
+                <p className='text-lg text-gray-900 text-center'>
                   Currently building:<Link href='https://www.launchpal.ai/' className='p-2 font-semibold hover:text-purple-700 cursor-pointer'>LaunchPal AI</Link>
                 </p>
                 <div className='flex flex-row gap-x-8 mt-4'>
