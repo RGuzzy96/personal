@@ -12,7 +12,7 @@ export default function Home() {
     function handleDragStart(event: { dataTransfer?: any; clientX?: any; clientY?: any; }) {
         const { clientX, clientY } = event;
         setStartPosition({ x: clientX, y: clientY });
-        event.dataTransfer.setDragImage(new Image(), 0, 0); // hide the default drag preview
+        event.dataTransfer.setDragImage(new Image(), 0, 0);
     }
 
     function handleDragOver(event: { preventDefault?: any; clientX?: any; clientY?: any; }) {
