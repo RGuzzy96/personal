@@ -1,3 +1,4 @@
+import Nav from '@/components/nav'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -19,7 +20,11 @@ export default function RootLayout({
       <head>
         <link rel="icon" type="image/x-icon" href="/r.png"></link>
       </head>
-      <body>{children}</body>
+      <body>
+      <Nav>
+          {children}
+      </Nav>
+      </body>
     </html>
   )
 }
