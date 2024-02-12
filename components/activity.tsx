@@ -38,14 +38,14 @@ export default function ActivityComponent() {
         <div className="flex flex-col gap-y-6 text-gray-900">
 
             {/* Section overview */}
-            <div className="text-lg">
-                This is a list of some of the projects I have been working on lately, both commercial and personal for-fun projects. I have included <span className="border bg-white items-center py-0.5 px-2 rounded-md shadow-sm inline-flex max-w-max"><a href="https://github.com/RGuzzy96" target="_blank" rel="noopener noreferrer" className="flex items-center gap-x-1"><BsGithub className="h-4 w-4"/>Github</a></span> links for my personal projects, and website links for any commercial projects.
+            <div className="text-lg dark:text-stone-300">
+                This is a list of some of the projects I have been working on lately, both commercial and personal for-fun projects. I have included <span className="border text-gray-900 mx-2 bg-white items-center py-0.5 px-2 rounded-md shadow-sm inline-flex max-w-max"><a href="https://github.com/RGuzzy96" target="_blank" rel="noopener noreferrer" className="flex items-center gap-x-1"><BsGithub className="h-4 w-4"/>Github</a></span> links for my personal projects, and website links for any commercial projects.
             </div>
 
             {/* Content section */}
             <div className="flex flex-col gap-4">
                 {activityItems.map(item => (
-                    <Link href={item.href} key={item.title} className="group flex gap-x-4 p-4 border shadow-sm bg-white">
+                    <Link href={item.href} target="_blank" rel="noopener noreferrer" key={item.title} className="group flex gap-x-4 p-4 border shadow-sm bg-white">
                         {item.imageSrc && 
                         <div className="flex-1 min-w-[144px]">
                             <img src={item.imageSrc} className="border rounded-md shadow-sm h-32 object-cover w-full"/>
