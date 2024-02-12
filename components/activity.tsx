@@ -45,7 +45,7 @@ export default function ActivityComponent() {
             {/* Content section */}
             <div className="flex flex-col gap-4">
                 {activityItems.map(item => (
-                    <Link href={item.href} target="_blank" rel="noopener noreferrer" key={item.title} className="group flex gap-x-4 p-4 border shadow-sm bg-white">
+                    <Link href={item.href} target="_blank" rel="noopener noreferrer" key={item.title} className="group flex flex-col sm:flex-row gap-4 p-4 border shadow-sm bg-white">
                         {item.imageSrc && 
                         <div className="flex-1 min-w-[144px]">
                             <img src={item.imageSrc} className="border rounded-md shadow-sm h-32 object-cover w-full"/>

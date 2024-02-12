@@ -21,11 +21,11 @@ const navItems = [
 
 export default function Nav({children}) {
     return(
-        <div className="w-full flex flex-col min-h-screen bg-stone-100 dark:bg-black items-center justify-start">
+        <div className="w-full flex flex-col min-h-screen bg-stone-100 dark:bg-black items-center justify-start px-4">
             <div className="w-full my-12 max-w-4xl flex items-center justify-between gap-x-6">
                 <div className="flex gap-x-6 items-center">
                     {navItems.map(item => (
-                    <Link href={item.href} key={item.name} className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 text-xl hover:text-gray-700">
+                    <Link href={item.href} key={item.name} className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 sm:text-xl hover:text-gray-700">
                         {item.name}
                     </Link>
                     ))}
