@@ -14,6 +14,10 @@ const navItems = [
         href: "/activity"
     },
     {
+        name: "work",
+        href: "/work"
+    },
+    {
         name: "blog",
         href: "/blog"
     }
@@ -25,7 +29,7 @@ export default function Nav({children}) {
             <div className="w-full my-12 max-w-4xl flex items-center justify-between gap-x-6">
                 <div className="flex gap-x-6 items-center">
                     {navItems.map(item => (
-                    <Link href={item.href} key={item.name} className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 sm:text-xl hover:text-gray-700">
+                    <Link href={item.href} key={item.name} className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 sm:text-2xl hover:text-gray-700">
                         {item.name}
                     </Link>
                     ))}

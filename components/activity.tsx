@@ -37,11 +37,11 @@ export default function ActivityComponent() {
     return (
         <div className="flex flex-col gap-y-6 text-gray-900 dark:text-stone-300">
 
-            <h1 className="text-3xl font-semibold ">my activity</h1>
+            <h1 className="text-3xl font-semibold">my activity</h1>
 
             {/* Section overview */}
             <div className="text-xl">
-                This is a list of some of the projects I have been working on lately, both commercial and personal for-fun projects. I have included <span className="border mx-2 bg-white dark:bg-black items-center py-0.5 px-2 rounded-md shadow-sm inline-flex max-w-max"><a href="https://github.com/RGuzzy96" target="_blank" rel="noopener noreferrer" className="flex items-center gap-x-1"><BsGithub className="h-4 w-4"/>Github</a></span> links for my personal projects, and website links for any commercial projects.
+                This is a list of some of the projects I have been working on lately, both commercial and personal for-fun projects. I have included <span className="border mx-1 bg-white dark:bg-black items-center py-0.5 px-2 rounded-md shadow-sm inline-flex max-w-max"><a href="https://github.com/RGuzzy96" target="_blank" rel="noopener noreferrer" className="flex items-center gap-x-1"><BsGithub className="h-4 w-4"/>Github</a></span> links for my personal projects, and website links for any commercial projects.
             </div>
 
             {/* Content section */}
