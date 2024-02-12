@@ -7,26 +7,26 @@ const activityItems = [
         title: "LaunchPal",
         type: "commercial",
         imageSrc: '/launchpal-site.png',
-        description: "This is a description of the Space Shooter project that I am working on. It provides information on the project, but also why I am doing it (what will I learn? why this project over others?).",
-        href: "/activity/launchpal",
+        description: "LaunchPal is leveraging AI to productize the digital marketing agency model to provide agencies and consultants the opportunity to service their clients better and in less time so they can scale, and SMBs with the opportunity to do their marketing themselves as an alternative to an agency.",
+        href: "https://launchpal.ai",
         created: "February 10, 2024",
         last_updated: "February 10, 2024"
     },
     {
         title: "Space Shooter",
         type: "personal",
-        imageSrc: '/r.png',
-        description: "This is a description of the Space Shooter project that I am working on. It provides information on the project, but also why I am doing it (what will I learn? why this project over others?).",
-        href: "/activity/space-shooter-project",
+        imageSrc: '/space-shooter.png',
+        description: "This project is a web-based space shooter game designed to provide a simple and engaging multiplayer experience for users. Players can create game instances and invite a friend to play against head-to-head.",
+        href: "https://github.com/RGuzzy96/space-shooter",
         created: "February 10, 2024",
         last_updated: "February 10, 2024"
     },
     {
         title: "Tiny BASIC Compiler",
         type: "personal",
-        imageSrc: null,
-        description: "This is a description of the Space Shooter project that I am working on. It provides information on the project, but also why I am doing it (what will I learn? why this project over others?).",
-        href: "/activity/tiny-basic-compiler-project",
+        imageSrc: "/tinyb.png",
+        description: "This project is a compiler written in Go that translates Tiny BASIC programs into JavaScript so that they may be run in the browser.",
+        href: "https://github.com/RGuzzy96/tiny-basic-compiler",
         created: "February 10, 2024",
         last_updated: "February 10, 2024"
     }
@@ -47,8 +47,8 @@ export default function ActivityComponent() {
                 {activityItems.map(item => (
                     <Link href={item.href} key={item.title} className="group flex gap-x-4 p-4 border shadow-sm bg-white">
                         {item.imageSrc && 
-                        <div className="h-24 w-48">
-                            <img src={item.imageSrc} className="border rounded-md shadow-sm h-full object-cover w-full"/>
+                        <div className="flex-1 min-w-[144px]">
+                            <img src={item.imageSrc} className="border rounded-md shadow-sm h-32 object-cover w-full"/>
                         </div>
                         }
                         <div className="flex flex-col gap-y-2">
