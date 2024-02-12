@@ -35,17 +35,19 @@ const activityItems = [
 export default function ActivityComponent() {
 
     return (
-        <div className="flex flex-col gap-y-6 text-gray-900">
+        <div className="flex flex-col gap-y-6 text-gray-900 dark:text-stone-300">
+
+            <h1 className="text-xl font-semibold ">my activity</h1>
 
             {/* Section overview */}
-            <div className="text-lg dark:text-stone-300">
-                This is a list of some of the projects I have been working on lately, both commercial and personal for-fun projects. I have included <span className="border text-gray-900 mx-2 bg-white items-center py-0.5 px-2 rounded-md shadow-sm inline-flex max-w-max"><a href="https://github.com/RGuzzy96" target="_blank" rel="noopener noreferrer" className="flex items-center gap-x-1"><BsGithub className="h-4 w-4"/>Github</a></span> links for my personal projects, and website links for any commercial projects.
+            <div className="text-lg">
+                This is a list of some of the projects I have been working on lately, both commercial and personal for-fun projects. I have included <span className="border mx-2 bg-white dark:bg-black items-center py-0.5 px-2 rounded-md shadow-sm inline-flex max-w-max"><a href="https://github.com/RGuzzy96" target="_blank" rel="noopener noreferrer" className="flex items-center gap-x-1"><BsGithub className="h-4 w-4"/>Github</a></span> links for my personal projects, and website links for any commercial projects.
             </div>
 
             {/* Content section */}
             <div className="flex flex-col gap-4">
                 {activityItems.map(item => (
-                    <Link href={item.href} target="_blank" rel="noopener noreferrer" key={item.title} className="group flex flex-col sm:flex-row gap-4 p-4 border shadow-sm bg-white">
+                    <Link href={item.href} target="_blank" rel="noopener noreferrer" key={item.title} className="group flex flex-col sm:flex-row gap-4 p-4 border shadow-sm bg-white dark:bg-stone-900">
                         {item.imageSrc && 
                         <div className="flex-1 min-w-[144px]">
                             <img src={item.imageSrc} className="border rounded-md shadow-sm h-32 object-cover w-full"/>
@@ -54,12 +56,12 @@ export default function ActivityComponent() {
                         <div className="flex flex-col gap-y-2">
                             <div className="flex gap-x-3 items-center">
                                 <h1 className="font-semibold">{item.title}</h1>
-                                {item.type === 'personal' && <span className="scale-95 text-xs bg-stone-50 border border-stone-400 text-stone-500 h-fit py-0.5 rounded-full inline-flex items-center px-2">Personal</span>}
-                                {item.type === 'commercial' && <span className="scale-95 text-xs bg-stone-50 border border-stone-400 text-stone-500 h-fit py-0.5 rounded-full inline-flex items-center px-2">Commercial</span>}
+                                {item.type === 'personal' && <span className="scale-95 text-xs bg-stone-50 dark:bg-black border border-stone-400 text-stone-500 h-fit py-0.5 rounded-full inline-flex items-center px-2">Personal</span>}
+                                {item.type === 'commercial' && <span className="scale-95 text-xs bg-stone-50 dark:bg-black border border-stone-400 text-stone-500 h-fit py-0.5 rounded-full inline-flex items-center px-2">Commercial</span>}
                             </div>
                             <p>{item.description}</p>
                         </div>
-                        <ArrowUpRightIcon className="h-6 w-6 min-w-max text-gray-300 group-hover:text-gray-900"/>
+                        <ArrowUpRightIcon className="h-6 w-6 min-w-max text-gray-300 group-hover:text-gray-900 dark:text-gray-900 dark:group-hover:text-gray-300 self-end md:self-auto"/>
                     </Link>
                 ))}
             </div>
