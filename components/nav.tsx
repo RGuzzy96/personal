@@ -13,13 +13,13 @@ const navItems = [
         name: "activity",
         href: "/activity"
     },
-    {
+    /*{
         name: "work",
         href: "/work"
-    },
+    },*/
     {
         name: "blog",
-        href: "/blog"
+        href: "https://the360engineer.substack.com"
     }
 ]
 
@@ -29,9 +29,18 @@ export default function Nav({children}) {
             <div className="w-full my-12 max-w-4xl flex items-center justify-between gap-x-6">
                 <div className="flex gap-x-6 items-center">
                     {navItems.map(item => (
-                    <Link href={item.href} key={item.name} className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 sm:text-2xl hover:text-gray-700">
-                        {item.name}
-                    </Link>
+                        <div key={item.name}>
+                            {item.name === 'blog' ? 
+                            <Link href={item.href} target="_blank" rel="noopener noreferrer" className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 sm:text-2xl hover:text-gray-700">
+                                {item.name}
+                            </Link>
+                            :
+                            <Link href={item.href} className="text-gray-900 dark:text-stone-300 dark:hover:text-stone-200 sm:text-2xl hover:text-gray-700">
+                                {item.name}
+                            </Link>
+                            }
+                        </div>
+                    
                     ))}
                 </div>
                 <div className="flex gap-x-6 items-center text-gray-700 dark:text-stone-300 dark:hover:text-stone-200 hover:text-gray-600">
